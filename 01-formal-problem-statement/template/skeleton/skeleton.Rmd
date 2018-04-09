@@ -16,7 +16,10 @@ htmltools::img(src = knitr::image_uri(file.path("logo.jpg")),
                alt = 'logo', 
                style = 'position:absolute; top:0; right:0; padding:10px;')
 
-# HINT: blocks like this one will no show in the final knit document.
+```
+```{r, echo=FALSE}
+# TIME SPENT: 8Hrs.
+# HINT: blocks like this one will not show in the final knit document.
 # These are just for help while building the content for the FPS.
 ```
 
