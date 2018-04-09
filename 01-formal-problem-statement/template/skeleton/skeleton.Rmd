@@ -20,9 +20,10 @@ htmltools::img(src = knitr::image_uri(file.path("logo.jpg")),
 &nbsp;
 
 ## 1. Goal
-<!-- Define: **What**
-It should be a business description of the problem statement, not the technical aspects describing the model.
---> 
+```{r, echo=FALSE}
+#Define: **What**
+#It should be a business description of the problem statement, not the technical aspects describing the model.
+```
 
 &nbsp;
 
