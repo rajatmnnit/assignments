@@ -3,36 +3,42 @@ title: "Formal Problem Statement (FPS)"
 author: 'Author: Rajat Jain'
 date: 'Last Updated: `r Sys.Date()`'
 output:
-  pdf_document:
-    toc: yes
   html_document:
     theme: lumen
     toc: yes
     toc_float: yes
+  pdf_document:
+    toc: yes
 ---
 
 ```{r, echo=FALSE}
 htmltools::img(src = knitr::image_uri(file.path("logo.jpg")), 
                alt = 'logo', 
                style = 'position:absolute; top:0; right:0; padding:10px;')
+
+# HINT: blocks like this one will no show in the final knit document.
+# These are just for help while building the content for the FPS.
 ```
 
 &nbsp;
 
 ## 1. Goal
 ```{r, echo=FALSE}
-#Define: **What**
-#It should be a business description of the problem statement, not the technical aspects describing the model.
+# HINT:
+# Define: **What**
+# It should be a business description of the problem statement, not the technical aspects
+# describing the model.
 ```
 
 &nbsp;
 
 ## 2. Key Stakeholders
 ```{r, echo=FALSE}
-#Define: **Who**
-#"Business Owners" are the key stakeholders requesting the solution of the problem.
-#"Customers / Consumers" are the people who will consume the solution.
-#*Note*: It is often possible that the Business Owners and Customers are the same set of people.
+# HINT:
+# Define: **Who**
+# "Business Owners" are the key stakeholders requesting the solution of the problem.
+# "Customers / Consumers" are the people who will consume the solution.
+# *Note*: It is often possible that the Business Owners and Customers are the same set of people.
 ```  
 ### a. Business Owners
 ### b. Customers
@@ -41,36 +47,46 @@ htmltools::img(src = knitr::image_uri(file.path("logo.jpg")),
 
 ## 3. Impact
 ```{r, echo=FALSE}
-#Define: **Why**
-#Quantify the importance and impact of this project. What happens if we do not do it.
-#Have both measurable and indirect impacts listed.
+# HINT:
+# Define: **Why**
+# Quantify the importance and impact of this project. What happens if we do not do it.
+# Have both measurable and indirect impacts listed.
 ```
 
 &nbsp;
 
 ## 4. Execution Plan
 ```{r, echo=FALSE}
-#Define: **How**
-#Remember, only define "how", not implement it. Do NOT discuss implementation details like the type of models which will be used in the solution.
+# HINT: 
+# Define: **How**
+# Remember, only define "how", not implement it. Do NOT discuss implementation details like
+# the type of models which will be used in the solution.
 ```
 ### a. Data Sources
 ```{r, echo=FALSE}
-#If it known where the data will come from, mention it. Remember, do not write the details of how the data will be cleaned up and/or processed. Just list the high level sources and nature of data.
+# HINT:
+# If it known where the data will come from, mention it. Remember, do not write the details
+# of how the data will be cleaned up and/or processed. Just list the high level sources and
+# nature of data.
 ```
 
 &nbsp;
 
 ## 5. Deployment Plan
 ```{r, echo=FALSE}
-#Define: **How and Where**
-#Discuss how the models built will be deployed and where. What will be the process to test/update the models?
+# HINT: 
+# Define: **How and Where**
+# Discuss how the models built will be deployed and where. What will be the process to 
+# test/update the models?
 ```
 
 &nbsp;
 
 ## 6. Resources
 ```{r, echo=FALSE}
-#It may make sense to estimate the amount of resources this project will require. If the project requires any specialized environment or hardware to be deployed and run, mention it.
+# HINT:
+# It may make sense to estimate the amount of resources this project will require. If the
+# project requires any specialized environment or hardware to be deployed and run, mention it.
 ```
 ### a. Human Resources
 ### b. Machine Resources
@@ -79,8 +95,9 @@ htmltools::img(src = knitr::image_uri(file.path("logo.jpg")),
 
 ## 7. Major Milestones
 ```{r, echo=FALSE}
-#Define: **When**
-#Define an ETA for each of the below mentioned stages of the project lifecycle.
+# HINT:
+# Define: **When**
+# Define an ETA for each of the below mentioned stages of the project lifecycle.
 ```
 ### a. **Ingest**:
 Data clean-up and ingestion will be completed by MM/DD/YYYY.
@@ -101,8 +118,9 @@ Plans to iterate for next version.
 
 ## 8. Success Criteria
 ```{r, echo=FALSE}
-#Define: Measurement
-#The business measurement. For example, CTR should increase by X%.
+# HINT:
+# Define: Measurement
+# The business measurement. For example, CTR should increase by X%.
 ```
 The success of this project will be measured by ___ . It's value should increase/decrease by __ %.
 
@@ -110,7 +128,8 @@ The success of this project will be measured by ___ . It's value should increase
 
 ## 9. Risks
 ```{r, echo=FALSE}
-#Define: Possibilities when things go unexpectedly
-#Risk mitigation plan, if any.
+# HINT:
+# Define: Possibilities when things go unexpectedly
+# Risk mitigation plan, if any.
 ```
 The prossible risks to this project are...
