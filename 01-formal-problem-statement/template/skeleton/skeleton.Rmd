@@ -1,22 +1,105 @@
 ---
 title: "Formal Problem Statement (FPS)"
-author: "Rajat Jain"
-date: "`r Sys.Date()`"
+author: 'Author: Rajat Jain'
+date: 'Last Updated: `r Sys.Date()`'
 output:
   html_document:
-    toc: true
+    theme: lumen
+    toc: yes
+    toc_float: yes
+  pdf_document:
+    toc: yes
 ---
 
+```{r, echo=FALSE}
+htmltools::img(src = knitr::image_uri(file.path("logo.jpg")), 
+               alt = 'logo', 
+               style = 'position:absolute; top:0; right:0; padding:10px;')
+```
 
-## Abstract
+&nbsp;
 
-## Key Stakeholders
+## 1. Goal
+<!-- Define: **What**
+It should be a business description of the problem statement, not the technical aspects describing the model.
+--> 
 
-## Impact (Importance)
+&nbsp;
 
-## Execution Details
+## 2. Key Stakeholders
+<!-- Define: **Who** -->
+### a. Business Owners
+<!-- "Business Owners" are the key stakeholders requesting the solution of the problem. -->
+### b. Customers
+<!-- "Customers / Consumers" are the people who will consume the solution.
+*Note*: It is often possible that the Business Owners and Customers are the same set of people.
+-->
 
-## Success Criteria
+&nbsp;
 
-## Risks
+## 3. Impact
+<!-- Define: **Why**
+Quantify the importance and impact of this project. What happens if we do not do it.
+Have both measurable and indirect impacts listed.
+-->
 
+&nbsp;
+
+## 4. Execution Plan
+<!-- Define: **How**
+Remember, only define "how", not implement it. Do NOT discuss implementation details like the type of models which will be used in the solution.
+-->
+### a. Data Sources
+<!-- If it known where the data will come from, mention it. Remember, do not write the details of how the data will be cleaned up and/or processed. Just list the high level sources and nature of data -->
+
+&nbsp;
+
+## 5. Deployment Plan
+<!-- Define: **How and Where**
+Discuss how the models built will be deployed and where. What will be the process to test/update the models?
+-->
+
+&nbsp;
+
+## 6. Resources
+<!-- It may make sense to estimate the amount of resources this project will require. If the project requires any specialized environment or hardware to be deployed and run, mention it.
+-->
+### a. Human Resources
+### b. Machine Resources
+
+&nbsp;
+
+## 7. Major Milestones
+<!-- Define: **When**
+Define an ETA for each of the below mentioned stages of the project lifecycle.
+-->
+### a. **Ingest**:
+Data clean-up and ingestion will be completed by MM/DD/YYYY.
+
+### b. **Model**:
+Models will be built on the ingested data and will be available for validation by MM/DD/YYYY.
+
+### c. **Validate**:
+Scoring to be tested on live traffic by MM/DD/YYYY.
+
+### d. **Deploy**:
+If accepted, the model(s) will be deployed to production by MM/DD/YYYY.
+
+### e. **Iterate**:
+Plans to iterate for next version.
+
+&nbsp;
+
+## 8. Success Criteria
+<!-- Define: Measurement
+The business measurement. For example, CTR should increase by X%.
+-->
+The success of this project will be measured by ___ . It's value should increase/decrease by __ %.
+
+&nbsp;
+
+## 9. Risks
+<!-- Define: Possibilities when things go unexpectedly
+-->
+The prossible risks to this project are...
+<!-- Risk mitigation plan, if any. -->
