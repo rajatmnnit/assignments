@@ -218,7 +218,7 @@ div.tocify {
 
 <h1 class="title toc-ignore">Formal Problem Statement (FPS)</h1>
 <h4 class="author"><em>Author: Rajat Jain</em></h4>
-<h4 class="date"><em>Last Updated: 2018-04-09</em></h4>
+<h4 class="date"><em>Last Updated: 2018-04-10</em></h4>
 
 </div>
 
@@ -229,17 +229,13 @@ div.tocify {
 <h2>1. Goal</h2>
 <p>Adobe sells its Creative Cloud products as various single apps and bundled subscription plans. One of such bundle is Photography plan which bundles Adobe Photoshop with Adobe Lightroom and a few other services. It is one of Adobe’s most popular packages and was originally tailored to bring in more professional as well as amateur photographers into the family by offering discounted prices on the software of their need. From the customers’ perspective, it is also a good way to get cheaper Photoshop than buying it as a single app subscription. <a href="https://www.adobe.com/creativecloud/plans.html">Pricing page</a> has more details. Hence it attracts a lot of non-photographers as well.</p>
 <p>Adobe currently uses the information from the plan purchased to run targeted marketing campaigns and to send learning tutorial recommendations to the customers to increase their engagement in-product; and to eventually increase customer retention. An example campaign could be, identified photographers may receive a marketing communication reminding them that they also have cloud storage associated with their Adobe account and should use it to reliably save their photos online. However, these campaigns are often found to be less effective on photography plan customers. Inacurate targeting due to a mix of photographers and other customers is often understood to be the reason behind it.</p>
-<p>To acurately target photographers, we need to classify the customers buying this bundle into “true” photographers v/s “non” photographers. If we are able to do that, the business will be able to,</p>
-<ol style="list-style-type: lower-alpha">
-<li>increase the effectiveness of the campaigns targeted towards photographers.</li>
-<li>steer other customers towards the right products or plans for them and increase overall engagement.  </li>
-</ol>
+<p>To acurately target photographers, we need to classify the customers buying this bundle into “true” photographers v/s “non” photographers.  </p>
 </div>
 <div id="key-stakeholders" class="section level2">
 <h2>2. Key Stakeholders</h2>
 <div id="a.-business-owners" class="section level3">
 <h3>a. Business Owners</h3>
-<p>Adobe’s Creative Cloud Product &amp; Marketing team led by Juanjo will sign-off on the requirements of this project and will refine the output requirements if needed.</p>
+<p>Adobe’s Creative Cloud Product &amp; Marketing team led by Juanjo will sign-off on the requirements of this project and will refine the output requirements, if needed.</p>
 </div>
 <div id="b.-smes" class="section level3">
 <h3>b. SMEs</h3>
@@ -247,27 +243,28 @@ div.tocify {
 </div>
 <div id="c.-customers" class="section level3">
 <h3>c. Customers</h3>
-<p>The output of this project will be primarily consumed by the Photography Product Marketing team at Adobe lead by Sr. Director Jim. Additionally, Johnson’s Creative Cloud Learning Content team will be responsible for running the campaigns to target “true” Photographers with content encouraging them to engage with Lightroom CC product.  </p>
+<p>The output of this project will primarily be consumed by the Photography Product Marketing team at Adobe lead by Sr. Director Jim. Additionally, Johnson’s Creative Cloud Learning Content team will be responsible for running the campaigns to target “true” photographers with content encouraging them to engage with Lightroom CC product.  </p>
 </div>
 </div>
 <div id="impact" class="section level2">
 <h2>3. Impact</h2>
-<p>Being able to identify “true” photographers will help Adobe marketing team by</p>
-<ul>
-<li>enabling them to target marketing communication to the correct set of users. For example, sending a tutorial link on “how to organize your photos in Lightroom” to a UX/UI designer who purchased Photography plan to get access to Photoshop for his/her work, may be a waste of Adobe’s marketing dollars and users’ screen time.</li>
-<li>enabling them to measure accurately and increase users’ engagement with products and eventually steer the “non” photographers to the plans which may be more suitable for them. Thus increasing retention and eventually ARR in longer term.  </li>
-</ul>
+<p>Being able to identify “true” photographers will help the business will be able to,</p>
+<ol style="list-style-type: lower-alpha">
+<li>increase the effectiveness of the campaigns targeted towards photographers.</li>
+<li>steer other customers towards the right products or plans for them and increase overall engagement.</li>
+<li>measure accurately and increase customer’s engagement with products and eventually increasing retention in longer term.  </li>
+</ol>
 </div>
 <div id="execution-plan" class="section level2">
 <h2>4. Execution Plan</h2>
-<p>We will build models based on various member attributes and their usage of the produts and product features, to segment Paid Photography segment users into “true” Photographers and “non” Photographers segments. The output of this project will be a table consisting of all qualifying members with their corresponding segment at a given snapshot date/time.</p>
+<p>We will build models based on various customer attributes and their usage of the produts and product features, to segment paid photography plan customers into “true” Photographer and “non” Photographer segments. The output of this project will be a table on Hadoop consisting of all qualifying members with their corresponding segment at a given snapshot date/time.</p>
 <div id="a.-data-sources" class="section level3">
 <h3>a. Data Sources</h3>
 <p>The following major data sources are available to us:</p>
 <ul>
-<li>Members’ profile consisting various attributes like geo location, plan purchased etc. This data resides in Adobe’s financial systems and is synched over to a centralized Hadoop cluster.</li>
-<li>Members’ product and product feature usage data collected by various Adobe apps running on users’ machines.</li>
-<li>Results from a survey where users have identified themselves into various job functions.</li>
+<li>Customer profile consisting various attributes like geo location, plan purchased etc. This data resides in Adobe’s financial systems and is synched over to a centralized Hadoop cluster.</li>
+<li>Customer’s product and product feature usage data collected by various Adobe apps running on their machines.</li>
+<li>Results from a survey where customers have self-classified themselves into various job functions.</li>
 </ul>
 <p>All the above data sources have been classified as “Company Confidential” or “Customer Confidential” data and may not be exported out of Adobe’s enterprise network.  </p>
 </div>
@@ -284,12 +281,12 @@ div.tocify {
 </div>
 <div id="b.-machine-resources" class="section level3">
 <h3>b. Machine Resources</h3>
-<p>No special hardware is required at this time based on the estimated volume. For future iterations, specialized hardware or data processing platforms may be required depending on the growth in size of data and desired frequency of model update.  </p>
+<p>No special hardware is required at this time based on the estimated data volume. For future iterations, specialized hardware or data processing platforms may be required depending on the growth in size of data and desired frequency of model update.  </p>
 </div>
 </div>
 <div id="major-milestones" class="section level2">
 <h2>7. Major Milestones</h2>
-<p>The first version of the project will take 7 weeks to complete.</p>
+<p>The first version of the project will take seven weeks to complete.</p>
 <table>
 <thead>
 <tr class="header">
@@ -307,15 +304,15 @@ div.tocify {
 <p>During this period, the following major milestones will be tracked.</p>
 <div id="a.-ingest" class="section level3">
 <h3>a. <strong>Ingest</strong>:</h3>
-<p>Data exploration, clean-up and ingestion will take three weeks and is estimated to be completed by 05/02/2018.</p>
+<p>Data exploration, clean-up, ingestion and feature generation will take three weeks and is estimated to be completed by 05/02/2018.</p>
 </div>
 <div id="b.-model" class="section level3">
 <h3>b. <strong>Model</strong>:</h3>
-<p>Model(s) will be built on the ingested data and will take three weeks. The will be available for validation by 05/23/2018.</p>
+<p>Model(s) will be built on the ingested data and will take three weeks. They will be available for validation(if required) by 05/23/2018.</p>
 </div>
 <div id="c.-validate" class="section level3">
 <h3>c. <strong>Validate</strong>:</h3>
-<p>No validation testing on production data planned yet.</p>
+<p>No validation testing on production data is planned yet.</p>
 </div>
 <div id="d.-deploy" class="section level3">
 <h3>d. <strong>Deploy</strong>:</h3>
