@@ -2,13 +2,14 @@
 title: "Formal Problem Statement (FPS)"
 author: 'Author: Rajat Jain'
 date: 'Last Updated: `r Sys.Date()`'
+time: 'Time Spent: 12 Hrs'
 output:
+  pdf_document:
+    toc: yes
   html_document:
     theme: lumen
     toc: yes
     toc_float: yes
-  pdf_document:
-    toc: yes
 ---
 
 ```{r, echo=FALSE}
@@ -18,7 +19,6 @@ htmltools::img(src = knitr::image_uri(file.path("logo.jpg")),
 
 ```
 ```{r, echo=FALSE}
-# TIME SPENT: 8Hrs.
 # HINT: blocks like this one will not show in the final knit document.
 # These are just for help while building the content for the FPS.
 ```
@@ -40,11 +40,13 @@ htmltools::img(src = knitr::image_uri(file.path("logo.jpg")),
 # HINT:
 # Define: **Who**
 # "Business Owners" are the key stakeholders requesting the solution of the problem.
+# "SMEs" are those who know the domain well.
 # "Customers / Consumers" are the people who will consume the solution.
 # *Note*: It is often possible that the Business Owners and Customers are the same set of people.
 ```  
 ### a. Business Owners
-### b. Customers
+### b. SMEs
+### c. Customers
 
 &nbsp;
 
@@ -102,21 +104,30 @@ htmltools::img(src = knitr::image_uri(file.path("logo.jpg")),
 # Define: **When**
 # Define an ETA for each of the below mentioned stages of the project lifecycle.
 ```
+The first version of the project will take ___ weeks to complete.
+
+| Estimated Start Date | ETA        |
+|:--------------------:|:----------:|
+| MM/DD/YYYY           | MM/DD/YYYY |
+   
+During this period, the following major milestones will be tracked.
+
 ### a. **Ingest**:
-Data clean-up and ingestion will be completed by MM/DD/YYYY.
+Data exploration, clean-up and ingestion will take ___ weeks and is estimated to be completed by MM/DD/YYYY.
 
 ### b. **Model**:
-Models will be built on the ingested data and will be available for validation by MM/DD/YYYY.
+Model(s) will be built on the ingested data and will take ___ weeks. The will be available for validation by MM/DD/YYYY.
 
 ### c. **Validate**:
-Scoring to be tested on live traffic by MM/DD/YYYY.
+Model(s) will be tested against the new live/offline/bucketed data for validation. This test will run for ___ weeks. Estimated Start Date: MM/DD/YYYY, Estimated End Date: MM/DD/YYYY.
 
 ### d. **Deploy**:
-If accepted, the model(s) will be deployed to production by MM/DD/YYYY.
+If accepted, the model(s) will be deployed to production. Deployment plan is as discussed earlier. Deployment process will take ___ days. ETA: MM/DD/YYYY.
 
 ### e. **Iterate**:
-Plans to iterate for next version.
+Plans to iterate for next version, if any.
 
+*All dates are tentatively estimated based on the expected start date. Exact milestone dates will be known when the project starts.
 &nbsp;
 
 ## 8. Success Criteria
@@ -135,4 +146,4 @@ The success of this project will be measured by ___ . It's value should increase
 # Define: Possibilities when things go unexpectedly
 # Risk mitigation plan, if any.
 ```
-The prossible risks to this project are...
+The possible risks to this project are...
