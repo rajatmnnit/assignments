@@ -1,3 +1,5 @@
+.gitignore
+
 # History files
 .Rhistory
 .Rapp.history
@@ -35,3 +37,7 @@ vignettes/*.pdf
 # Files & Directories created acyomatically by OSX Filesystem
 .DS_Store
 **/.DS_Store/
+=======
+# RMd files
+README.Rmd
+*_files/*
