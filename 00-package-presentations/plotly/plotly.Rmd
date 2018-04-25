@@ -1,0 +1,131 @@
+---
+title: "Plotly"
+author: "Rajat Jain"
+output:
+  ioslides_presentation:
+    widescreen: true
+    fig_caption: true
+  pdf_document: 
+    always_allow_html: yes
+  html_document:
+    theme: lumen
+    toc: yes
+    toc_float: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r libs, message=FALSE, warning=FALSE, include=FALSE, results='hide'}
+library(magrittr)
+library(wordcloud)
+library(ggplot2)
+library(dlstats)
+library(plotly)
+
+rand <- function() {
+  return ((sample(1:100)[1]) / 100.0)
+}
+```
+
+
+## Plotly's R graphing library
+Makes interactive, publication-quality Graphs.
+```{r wordcloud, fig.align="center", fig.height=4.5, fig.width=9, message=FALSE, warning=FALSE, echo=FALSE}
+wordcloud(c("line plots", "scatter plots", "area charts", "bar charts", "error bars", "box plots", "histograms", "heatmaps", "subplots", "multiple-axes", "3D WebGL based charts"), min.freq=1, max.words = 100, random.order = TRUE, random.color = TRUE, colors = rev(colorRampPalette(brewer.pal(9,"Blues"))(32)[seq(8,32,6)]))
+```
+Courtesy: https://plot.ly/r/
+
+
+## Data
+For this presentation we will use package download statistics data from CRAN.
+```{r data, fig.align="center"}
+pkg.downloads <- cran_stats(c("ggplot2", "ggvis", "plotly", "dygraphs", "ggiraph"))
+head(pkg.downloads)
+```
+Data Source: dlstats package - https://cran.r-project.org/web/packages/dlstats/index.html
+
+
+## A Simple ggplot2 line chart
+```{r ggplot, fig.align="center", fig.height=4, fig.width=9, message=FALSE, warning=FALSE}
+simple_plot <- ggplot(data=pkg.downloads, aes(x=start, y=downloads, color=package)) +
+  geom_line() + xlab("Months") + ylab("# Downloads") +
+  labs(title="Package Adoption", color="Package")
+simple_plot
+```
+
+
+## Plotly in Action
+```{r plotly, fig.align="center", fig.height=4, fig.width=9, message=FALSE, warning=FALSE}
+plot_ly(data=pkg.downloads, x=~start, y=~downloads, color=~package, mode='lines') %>%
+  layout(title="Package Adoption", 
+         xaxis=list(title="Months"), yaxis=list(title="# Downloads"))
+```
+
+
+## What if we have multiple statistics to plot?
+We have only one statistic - downloads in the original dataset. Let's create another one - installs. Successful installs are a certain percentage (<= 100%) of downloads.
+```{r installs, fig.align="center"}
+pkg.downloads$installs = round(rand() * pkg.downloads$downloads)
+head(pkg.downloads)
+```
+
+
+## Plotly - Multiple Traces
+```{r multitrace, fig.align="center", fig.height=4, fig.width=9, message=FALSE, warning=FALSE}
+mt_plot <- plot_ly(data=pkg.downloads[pkg.downloads$package=='plotly',], x=~start) %>%
+  add_trace(y=~downloads, name='Downloads', mode='lines') %>%
+  add_trace(y=~installs, name='Installs', mode='lines+markers') %>%
+  layout(title="Plotly Download & Install Success") 
+mt_plot
+```
+
+
+## Like It? Share It!
+```{r auth, message=FALSE, warning=FALSE, include=FALSE, results='hide', echo=FALSE}
+Sys.setenv("plotly_username"="rajatj")
+Sys.setenv("plotly_api_key"="")
+```
+Create a shareable link to your chart using Plotly API.
+```{r share, message=FALSE, warning=FALSE}
+chart_link <- api_create(mt_plot, filename="multi-trace-plot1")
+```
+Saved at URL: `r chart_link$web_url`
+
+Before using this feature, you will have to setup API credentials. Follow instructions here: https://plot.ly/r/getting-started/#initialization-for-online-plotting
+
+
+## Got ggplot2 Charts?
+No worries, Plotly can transform them!
+```{r transform, fig.align="center", fig.height=4, fig.width=9, message=FALSE, warning=FALSE}
+ggplotly(simple_plot)
+```
+
+
+## Similar
+There are several Graphing packages available for R. E.g.,
+
+- ggplot2
+- ggvis
+
+Choice is yours,
+
+* ggplot2 continues to be the most popular one. We have proof!
+* plotly is great with interactive charts
+    + Good for dashboards
+    + Not so much, if your final output is non-HTML like PDF - https://plot.ly/r/knitr/#embedding-plotly-graphs-in-rmd-files
+
+Ref: Nice blog comparing ggplot2 and plotly - https://www.bryanwhiting.com/2017/02/the-dataviz-battle-plotly-vs-ggplot2/
+
+
+## References
+
+- Getting Started: https://plot.ly/r/getting-started/
+
+- Everything Plotly: https://plot.ly/r/reference/
+
+- Surprisingly good Cheet Sheet: https://images.plot.ly/plotly-documentation/images/r_cheat_sheet.pdf
+
+- R Markdown file which generated this presentation: https://github.com/rajatmnnit/csx415-assignments/tree/master/00-package-presentations/plotly/plotly.Rmd
